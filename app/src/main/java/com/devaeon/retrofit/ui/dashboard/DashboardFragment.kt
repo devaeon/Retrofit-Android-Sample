@@ -31,7 +31,7 @@ class DashboardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.textDashboard.movementMethod = ScrollingMovementMethod()
+  /*      binding.textDashboard.movementMethod = ScrollingMovementMethod()
 
         viewLifecycleOwner.lifecycleScope.launch {
             dashboardViewModel.projectsState.collect { state ->
@@ -66,7 +66,7 @@ class DashboardFragment : Fragment() {
             fetchProjectsResponse()
 //            fetchProjectsRaw()
 //            fetchProjectsCall()
-        }
+        }*/
     }
 
     override fun onDestroyView() {

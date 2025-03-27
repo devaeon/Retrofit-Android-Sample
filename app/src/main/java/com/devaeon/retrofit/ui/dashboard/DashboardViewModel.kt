@@ -1,18 +1,9 @@
 package com.devaeon.retrofit.ui.dashboard
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.devaeon.retrofit.RetrofitClient
-import com.devaeon.retrofit.model.Project
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.launch
-import retrofit2.HttpException
-import java.io.IOException
 
 class DashboardViewModel : ViewModel() {
-
+/*
     private val _projectsState = MutableStateFlow<UiState<Map<String, Project>>>(UiState.Loading)
     val projectsState: StateFlow<UiState<Map<String, Project>>> = _projectsState
 
@@ -95,6 +86,8 @@ class DashboardViewModel : ViewModel() {
             }
         })
     }
+
+    */
 }
 
 

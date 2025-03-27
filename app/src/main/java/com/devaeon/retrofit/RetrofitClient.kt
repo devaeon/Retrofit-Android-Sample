@@ -1,7 +1,5 @@
 package com.devaeon.retrofit
 
-import com.devaeon.retrofit.converter.LenientGsonConverterFactory
-import com.devaeon.retrofit.interfaces.EclipseApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -32,16 +30,17 @@ object RetrofitClient {
         .addInterceptor(loggingInterceptor) // Attach logging interceptor
         .build()
 
-    /**
-     * Lazy-initialized Retrofit service instance.
-     * Provides API access using the `EclipseApiService` interface.
-     */
-    val apiService: EclipseApiService by lazy {
-        Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .addConverterFactory(LenientGsonConverterFactory.create())
-            .client(client) // Attach custom OkHttpClient
-            .build()
-            .create(EclipseApiService::class.java)
-    }
+
+//    /**
+//     * Lazy-initialized Retrofit service instance.
+//     * Provides API access using the `EclipseApiService` interface.
+//     */
+//    val apiService: EclipseApiService by lazy {
+//        Retrofit.Builder()
+//            .baseUrl(BASE_URL)
+//            .addConverterFactory(LenientGsonConverterFactory.create())
+//            .client(client) // Attach custom OkHttpClient
+//            .build()
+//            .create(EclipseApiService::class.java)
+//    }
 }

@@ -1,56 +1,49 @@
+import com.android.gradle.core.android
+import com.android.gradle.core.implementation
+
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.android.androidApplication)
+    alias(libs.plugins.androidxNavigationSafeArgs)
+    alias(libs.plugins.android.hilt)
 }
 
-android {
+android{
     namespace = "com.devaeon.retrofit"
-    compileSdk = 35
+
+
+    buildFeatures.viewBinding = true
+    buildFeatures.buildConfig= true
 
     defaultConfig {
         applicationId = "com.devaeon.retrofit"
-        minSdk = 24
-        targetSdk = 35
+
         versionCode = 1
-        versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        versionName = "1.0.0"
     }
 
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-        }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-    kotlinOptions {
-        jvmTarget = "11"
-    }
-    buildFeatures {
-        viewBinding = true
-    }
 }
 
-dependencies {
 
+dependencies {
+    implementation(libs.kotlinx.coroutines.core)
+
+    implementation(libs.androidx.appCompat)
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.lifecycle.livedata.ktx)
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.core.splashscreen)
+    implementation(libs.androidx.datastore)
+    implementation(libs.androidx.recyclerView)
+    implementation(libs.androidx.fragment.ktx)
+
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.androidx.lifecycle.extensions)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.common.java8)
 
-    implementation("com.squareup.retrofit2:retrofit:2.11.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+    implementation(libs.retrofit2.retrofit)
+    implementation(libs.retrofit2.converter.gson)
+    implementation(libs.logging.interceptor)
 }
