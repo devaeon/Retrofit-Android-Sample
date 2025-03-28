@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="unable_to_read_or_write_data_please_check">Unable to read or write data. Please check your network connection or file permissions.</string>
+    <string name="an_unexpected_error_occurred_please_restart_the_app_and_try_again">An unexpected error occurred. Please restart the app and try again.</string>
+    <string name="an_unknown_error_occurred_please_contact_support">An unknown error occurred: %1$s. Please contact support.</string>
+</resources>

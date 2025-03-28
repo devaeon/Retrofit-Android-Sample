@@ -22,6 +22,10 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
             defaultConfig.apply {
                 targetSdk = libs.versions.android.compileSdk
                 minSdk = libs.versions.android.minSdk
+
+                buildFeatures{
+                    buildConfig = true
+                }
             }
 
             compileOptions.apply {

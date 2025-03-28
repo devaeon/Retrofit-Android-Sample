@@ -1,3 +1,20 @@
+@file:Suppress("UnstableApiUsage")
+
+include(":features:post")
+
+
+include(":core:ui")
+
+
+include(":core:domain")
+
+
+include(":core:data")
+
+
+include(":core:network")
+
+
 pluginManagement {
     includeBuild("build-logic")
     repositories {
@@ -22,3 +39,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Retrofit-Android-Sample"
 include(":app")
+include(":core:common")

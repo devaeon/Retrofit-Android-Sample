@@ -23,6 +23,11 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
             defaultConfig.apply {
                 targetSdk = libs.versions.android.compileSdk
                 minSdk = libs.versions.android.minSdk
+
+                buildFeatures{
+                    viewBinding = true
+                    buildConfig = true
+                }
             }
 
             compileOptions.apply {
